@@ -1,0 +1,41 @@
+
+
+<div class="wrapper">
+<a>Users</a>
+  <div></div>
+  <div><button class="button1" > Add </button></div>
+
+</div>
+  <br>
+  <table id="customers" class="box" >
+
+    <thead>
+      <tr>
+     <th> id </th>
+     <th>   Name  </th>
+        <th>  Age  </th>
+
+     <th> action </th>
+    </tr>
+    </thead>
+
+    <tbody >
+  <tr *ngFor="let user of UserList ">
+    <td>
+      {{user.id}}
+    </td>
+    <td>
+      {{user.Name}}
+    </td>
+    <td>
+      {{user.Age}}
+    </td>
+ 
+    <!-- <td><button class="button" (click)="EditUser(user)">Edit</button> -->
+      <button class="delete" (click)="deleteUser(user)">delete</button>
+    </td>
+
+  </tr>
+    </tbody>
+  </table>
+
